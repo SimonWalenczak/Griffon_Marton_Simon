@@ -1,19 +1,25 @@
+using Common;
+using GameManager;
 using UnityEngine;
 
 public enum CardStatus
 {
-    InHand = 0,
-    InHandHovered = 1,
-    InHandMinor = 2,
-    Dragged = 3,
+    InBar = 0,
+    Hovered = 1,
+    Dragged = 2,
+    InInn = 3,
     Discarded = 4
 }
 
-public class CardManager : MonoBehaviour
+public class CardManager : Singleton<CardManager>
 {
     public static CardManager Instance;
-    
-    [field: SerializeField] public GameplayDeckManager GameplayDeckManager { get; private set; }
+
+    [field: SerializeField] public CardDrawer CardDrawer { get; private set; }
+    [field: SerializeField] public Bar Bar { get; private set; }
+    [field: SerializeField] public Inn Inn { get; private set; }
+    [field: SerializeField] public DiscardPile DiscardPile { get; private set; }
+    [field: SerializeField] public CardStateManager CardStateManager { get; private set; }
 
     private void Awake()
     {

@@ -529,14 +529,13 @@ MonoBehaviour:
   Data: {fileID: 0}
   <CardVisual>k__BackingField: {fileID: 1596177738997644431}
   cardStatus: 0
-  IdlePosition: {x: 0, y: 0, z: 0}
-  HoveredPosition: {x: 0, y: 0, z: 0}
-  MinorPosition: {x: 0, y: 0, z: 0}
+  InBarPosition: {x: 0, y: 0, z: 0}
+  InInnPosition: {x: 0, y: 0, z: 0}
   DiscardPosition: {x: 0, y: 0, z: 0}
-  IdleScale: {x: 0, y: 0, z: 0}
-  HoveredScale: {x: 0, y: 0, z: 0}
-  MinorScale: {x: 0, y: 0, z: 0}
+  InSlotScale: {x: 0, y: 0, z: 0}
+  HoveredScale: {x: 1.5, y: 1.5, z: 1.5}
   DiscardScale: {x: 0, y: 0, z: 0}
+  GenericRotation: {x: 0, y: 0, z: 0}
   DiscardRotation: {x: 0, y: 0, z: 0}
   TargetPosition: {x: 0, y: 0, z: 0}
   TargetRotation: {x: 0, y: 0, z: 0, w: 0}

@@ -1,50 +1,46 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using Card;
 using UnityEngine;
 
 public class CardDrawer : MonoBehaviour
 {
-    public List<CardData> CardsInDrawer;
+    [field: SerializeField] public Deck DeckData { get; private set; }
+    [field: SerializeField] public GameObject cardPrefab { get; private set; }
 
-    [SerializeField] private float _timeBetweenCardSpawn;
-    
-    //Debug
-    private int nbCardsCreate = 1;
+    [SerializeField] private List<CardData> CardData;
 
-    public void DrawCards(int nbCardsToDraw)
+    private void Start()
     {
-        StartCoroutine(SpawnCards(nbCardsToDraw));
+        CardData.AddRange(DeckData.cards);
     }
 
-    private IEnumerator SpawnCards(int nbCardsToDraw)
+    public void DrawCard()
     {
-        for (int i = 0; i < nbCardsToDraw; i++)
+        // foreach (Slot slot in CardManager.Instance.Bar.CardsInBar)
+        // {
+        //     if (slot.HasCard == false)
+        //     {
+        //         CreateCard(slot);
+        //         break;
+        //     }
+        // }
+    }
+
+    private void CreateCard(Slot targetSlot)
+    {
+        if (DeckData.cards.Count > 0 && !targetSlot.HasCard)
         {
-            CardHand cardHand = CardManager.Instance.GameplayDeckManager.CardHand;
-            
-            if (cardHand.cardsInHand.Count < cardHand.MaxCardsInHand)
-            {
-                if (CardsInDrawer.Count == 0)
-                {
-                    CardManager.Instance.GameplayDeckManager.ResetDrawerFromDiscardPile();
-                }
+            CardData drawnCard = CardData[0];
+            CardData.RemoveAt(0);
 
-                GameObject newCard = Instantiate(CardManager.Instance.GameplayDeckManager.CardPrefab, transform.position,
-                    new Quaternion(0, -90, 90, 0));
-
-                newCard.GetComponent<CardController>().Data = CardsInDrawer[0];
-
-                cardHand.cardsInHand.Add(newCard.transform);
-
-                CardsInDrawer.RemoveAt(0);
-
-                newCard.name = "Card " + nbCardsCreate;
-
-                nbCardsCreate++;
-                
-                yield return new WaitForSeconds(_timeBetweenCardSpawn);
-            }
+            GameObject newCard = Instantiate(cardPrefab);
+            newCard.transform.position = targetSlot.transform.position;
+            newCard.GetComponent<CardController>().Data = drawnCard;
+            newCard.GetComponent<CardController>().CurrentSlot = targetSlot;
+            newCard.GetComponent<CardVisual>().Initialize(drawnCard);
+            targetSlot.PlaceCard(drawnCard);
+            CardManager.Instance.Bar.CardsInBar.Add(drawnCard);
         }
     }
 }

@@ -48,4 +48,9 @@ public class Inn : MonoBehaviour
     {
         return CardsInInn.FindIndex(data => data.cardName == cardData.cardName);
     }
+
+    public void RemoveCardWithHateAttribute(Attribute hateAttribute)
+    {
+        CardsInInn.RemoveAll(data => data.BarCondition == hateAttribute);
+    }
 }

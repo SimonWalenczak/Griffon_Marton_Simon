@@ -14,7 +14,7 @@ namespace Card
         public Attribute BarCondition;
         public InnCondition InnCondition;
         public string InnConditionText; 
-        public Consequence Consequence;
+        public AbstractLeave LeaveEvent;
         public bool IsGoblin;
 
         public bool HasAttribute(Attribute conditionAttribute)

@@ -15,6 +15,20 @@ namespace Card
         public InnCondition InnCondition;
         public string InnConditionText; 
         public Consequence Consequence;
+        public bool IsGoblin;
+
+        public bool HasAttribute(Attribute conditionAttribute)
+        {
+            foreach (Attribute attribute in attributes)
+            {
+                if (attribute == conditionAttribute)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 
     public enum Attribute

@@ -6,6 +6,9 @@ public class CardAttributeManager : MonoBehaviour
 {
     public static CardAttributeManager Instance { get; private set; }
 
+    public Inn Inn;
+    public Bar Bar;
+    
     public List<Sprite> AttributeSprites;
     
     private void Awake()

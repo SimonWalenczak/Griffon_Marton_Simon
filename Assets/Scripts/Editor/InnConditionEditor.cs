@@ -54,7 +54,7 @@ public class InnConditionEditor : Editor
                 {
                     EditorGUILayout.EndHorizontal();
                 }
-                else if (comparisonType == Comparison.Adjascent)
+                else if (comparisonType == Comparison.Adjacent)
                 {
                     EditorGUILayout.EndHorizontal();
                     right.SetUnderlyingValue(ObjectType.Number);

@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6865e51a5fe4c128d745aec451798be, type: 3}
   m_Name: InnCondition1
   m_EditorClassIdentifier: 
+  Left: 0
+  Comparison: 1
+  Right: 3
+  Place: 1
+  Number: 0

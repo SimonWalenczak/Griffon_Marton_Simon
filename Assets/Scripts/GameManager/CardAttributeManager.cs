@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class CardAttributeManager : MonoBehaviour
 {
+    public enum PlayState
+    {
+        InnState,
+        BarState,
+    }
+    
     public static CardAttributeManager Instance { get; private set; }
 
     public Inn Inn;

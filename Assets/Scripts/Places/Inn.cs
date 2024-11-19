@@ -43,4 +43,9 @@ public class Inn : MonoBehaviour
 
         return count;
     }
+
+    public int GetCardPosition(CardData cardData)
+    {
+        return CardsInInn.FindIndex(data => data.cardName == cardData.cardName);
+    }
 }

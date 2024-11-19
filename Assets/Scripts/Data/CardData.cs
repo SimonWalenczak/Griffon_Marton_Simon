@@ -29,6 +29,18 @@ namespace Card
 
             return false;
         }
+
+        public bool WantsToLeave(CardAttributeManager.PlayState state)
+        {
+            if (state == CardAttributeManager.PlayState.InnState)
+            {
+                return InnCondition.CheckCondition(CardAttributeManager.Instance.Inn.GetCardPosition(this));
+            }
+            else
+            {
+                return CardAttributeManager.Instance.Bar.CountCardsByAttribute(BarCondition) >= 3;
+            }
+        }
     }
 
     public enum Attribute

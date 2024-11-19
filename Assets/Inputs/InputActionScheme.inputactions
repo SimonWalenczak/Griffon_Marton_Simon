@@ -1,0 +1,54 @@
+{
+    "name": "InputActionScheme",
+    "maps": [
+        {
+            "name": "CardController",
+            "id": "554074db-e9d3-4e23-bb0d-42a652d3600d",
+            "actions": [
+                {
+                    "name": "LeftClickPress",
+                    "type": "Button",
+                    "id": "b5c807da-9532-4c20-8b23-06a3ec401bf4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MouseMove",
+                    "type": "Value",
+                    "id": "b7473a4b-aa91-408a-990f-5bcf84dbfb55",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7617b6ed-27cb-4376-bde7-698f284e695d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftClickPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3c061710-b6f6-46ec-ae0f-0105aebb87c7",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

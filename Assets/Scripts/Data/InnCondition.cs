@@ -1,13 +1,24 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace DefaultNamespace
 {
+    public enum ConditionType
+    {
+        None,
+        Or,
+        And,
+    }
+    
     public enum ObjectType
     {
         Beer,
         Food,
         Noise,
         Number,
+        Goblin,
+        Floor,
     }
 
     public enum Comparison
@@ -17,7 +28,9 @@ namespace DefaultNamespace
         Greater,
         GreaterOrEqual,
         Equals,
-        AboveOrBelow
+        AboveOrBelow,
+        Adjascent,
+        LastFloor,
     }
 
     public enum Place
@@ -25,15 +38,22 @@ namespace DefaultNamespace
         Inn,
         Bar,
     }
-    
-    [CreateAssetMenu(fileName = "InnCondition", menuName = "Data/Condition/InnCondition", order = 0)]
-    public class InnCondition : ScriptableObject
+
+    [Serializable]
+    public class Condition
     {
+        public ConditionType ConditionType;
         public ObjectType Left;
         public Comparison Comparison;
         public ObjectType Right;
         public Place Place;
         public int Number;
+    }
+    
+    [CreateAssetMenu(fileName = "InnCondition", menuName = "Data/Condition/InnCondition", order = 0)]
+    public class InnCondition : ScriptableObject
+    {
+        public List<Condition> Conditions;
 
         public bool CheckCondition()
         {

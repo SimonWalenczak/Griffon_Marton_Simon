@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6865e51a5fe4c128d745aec451798be, type: 3}
-  m_Name: InnCondition1
+  m_Name: "Doppelg\xE4ngerInd\xE9cis"
   m_EditorClassIdentifier: 
-  Left: 0
-  Comparison: 1
-  Right: 3
-  Place: 1
-  Number: 0
+  Conditions:
+  - ConditionType: 0
+    Left: 1
+    Comparison: 3
+    Right: 3
+    Place: 0
+    Number: 4

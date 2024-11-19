@@ -4,6 +4,8 @@ using Inputs;
 
 public class CardHand : MonoBehaviour
 {
+    #region Properties
+
     public Camera CardCamera;
 
     public List<Transform> cardsInHand = new List<Transform>();
@@ -36,6 +38,10 @@ public class CardHand : MonoBehaviour
     private float _offsetZCardCamera;
     private int _cardSelectedIndex;
     private RaycastHit[] _cardHits = new RaycastHit[8];
+
+    #endregion
+
+    #region Methods
 
     private void Start()
     {
@@ -127,28 +133,19 @@ public class CardHand : MonoBehaviour
     /// </summary>
     private void DetectCardToHovered()
     {
-        //Debug.Log("There is no card selected. Try to hovered a card");
-
-        //Raycast
         Ray ray = CardCamera.ScreenPointToRay(Input.mousePosition);
         int hits = Physics.RaycastNonAlloc(ray, _cardHits);
 
-        if (hits != 0) //Check if there is something in raycast result
+        if (hits != 0)
         {
-            // Debug.Log("There is something on the ray way");
-
-            //Check if ray hits a different card than the current hovered card
             for (int i = 0; i < hits; i++)
             {
                 if (_cardHits[i].collider.TryGetComponent(out CardController card) &&
                     card.cardStatus != CardStatus.Discarded)
                 {
-                    // Debug.Log($"{card.name} has found on the ray way");
-
-                    if (_cardHovered != null) //If there is already a card hovered
+                    if (_cardHovered != null)
                     {
-                        if (_cardHits[i].collider.gameObject ==
-                            _cardHovered.gameObject) //Check if the first card on the ray way is CardHovered
+                        if (_cardHits[i].collider.gameObject == _cardHovered.gameObject)
                         {
                             return;
                         }
@@ -189,19 +186,19 @@ public class CardHand : MonoBehaviour
 
     private void UpdateCardDetection()
     {
-        if (_cardSelected == null) //Check if there isn't card selected
+        if (_cardSelected == null)
         {
-            DetectCardToHovered(); //Check if there is a card to hovered under the cursor
+            DetectCardToHovered();
         }
         else
         {
             SetSelectedCardTransform();
-            _cardSelected.cardStatus = CardStatus.Dragged; //Change card status from InHandHovered to Dragged
+            _cardSelected.cardStatus = CardStatus.Dragged;
         }
 
         if (_cardHovered != null)
         {
-            _cardHovered.cardStatus = CardStatus.InHandHovered; //Change card status from InHand to InHandHovered
+            _cardHovered.cardStatus = CardStatus.InHandHovered;
         }
     }
 
@@ -210,21 +207,20 @@ public class CardHand : MonoBehaviour
     /// </summary>
     private void SetSelectedCard()
     {
-        if (_cardHovered !=
-            null) //Check if there is a card hovered. In this case, the card hovered become the selected card.
+        if (_cardHovered != null)
         {
-            _cardSelected = _cardHovered; //Set CardSelected with CardHovered
+            _cardSelected = _cardHovered;
 
             _offsetZCardCamera =
                 _cardSelected.transform.position.z -
-                CardCamera.transform.position.z; //Get distance between card selected and card camera
+                CardCamera.transform.position.z;
 
             _cardSelectedIndex =
-                cardsInHand.IndexOf(_cardHovered.transform); //Get index of card selected in the hand if it go back in
+                cardsInHand.IndexOf(_cardHovered.transform);
 
-            cardsInHand.Remove(_cardHovered.transform); //Remove card selected from the cards in hand list
+            cardsInHand.Remove(_cardHovered.transform);
 
-            _cardHovered = null; //Reset CardHovered
+            _cardHovered = null;
         }
     }
 
@@ -241,30 +237,25 @@ public class CardHand : MonoBehaviour
         }
     }
 
-    private void SetSelectedCardTransform() //Called when there is a selected card
+    private void SetSelectedCardTransform()
     {
-        Vector3 newPosition = GetMouseWorldPosition(); //Get the mouse position on the screen
+        Vector3 newPosition = GetMouseWorldPosition();
 
         float yDifference = Mathf.Clamp((newPosition.y - _cardSelected.transform.position.y), -_clampValueRotation / 10,
             _clampValueRotation / 10);
         float xDifference = Mathf.Clamp((newPosition.x - _cardSelected.transform.position.x), -_clampValueRotation / 10,
             _clampValueRotation / 10);
 
-        //Quaternion toRotation = Quaternion.Euler(-90 + (yDifference) * 90, -(xDifference) * 90, 0);
-
-        //Set target position and rotation to selected card's controller
         _cardSelected.TargetPosition = newPosition;
-        //_cardSelected.TargetRotation = toRotation;
     }
 
-    private Vector3 GetMouseWorldPosition() //Called in SetSelectedCardTransform
+    private Vector3 GetMouseWorldPosition()
     {
         Vector3 mousePoint = Input.mousePosition;
-        mousePoint.z = _offsetZCardCamera + SelectedOffsetPosition.z; //Apply Z offset on mouse position
+        mousePoint.z = _offsetZCardCamera + SelectedOffsetPosition.z;
         return CardCamera.ScreenToWorldPoint(mousePoint) + SelectedOffsetPosition;
     }
 
-    //Called when left mouse click up and there is no slot location under the card selected
     private void AddCardFromMouseToHand()
     {
         cardsInHand.Insert(_cardSelectedIndex, _cardSelected.transform);
@@ -292,4 +283,6 @@ public class CardHand : MonoBehaviour
         if (_cardSelected != null)
             AddCardFromMouseToHand();
     }
+
+    #endregion
 }

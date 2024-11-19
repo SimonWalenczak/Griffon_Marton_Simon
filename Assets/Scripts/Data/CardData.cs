@@ -19,8 +19,6 @@ namespace Card
 
     public enum Attribute
     {
-        // public string name;
-        // public Sprite icon;
         None,
         Food,
         Beer,

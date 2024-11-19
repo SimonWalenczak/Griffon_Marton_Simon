@@ -17,10 +17,15 @@ namespace Card
         public Consequence Consequence;
     }
 
-    [Serializable]
-    public struct Attribute
+    public enum Attribute
     {
-        public string name;
-        public Sprite icon;
+        // public string name;
+        // public Sprite icon;
+        None,
+        Food,
+        Beer,
+        Fight,
+        Noise,
+        Smell,
     }
 }

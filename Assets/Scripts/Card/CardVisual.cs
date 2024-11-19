@@ -23,7 +23,7 @@ public class CardVisual : MonoBehaviour
         }
         
         _innConditionText.text = data.InnConditionText;
-        _barConditionIcon.sprite = data.BarCondition.icon;
+        _barConditionIcon.sprite = CardAttributeManager.Instance.GetSprite(data.BarCondition);
         _consequenceText.text = data.Consequence.ConsequenceText;
     }
 }

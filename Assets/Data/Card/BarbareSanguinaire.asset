@@ -14,12 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Barbare Sanguinaire
   cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
-  attributes:
-  - name: 
-    icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  BarCondition:
-    name: 
-    icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  attributes: 0100000003000000
+  BarCondition: 0
   InnCondition: {fileID: 11400000, guid: e0ae4d62e7bc30c4183da71dcceba50f, type: 2}
-  InnConditionText: Inn Condition Coucou
+  InnConditionText: "S'il n'y a pas de Bi\xE8re dans le Bar:"
   Consequence: {fileID: 11400000, guid: cde2d6a2c0be26d43b25f07a825a329f, type: 2}

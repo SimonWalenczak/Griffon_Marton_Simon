@@ -1,24 +1,38 @@
+using System;
 using Card;
 using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-    [field: SerializeField] public bool HasCard { get; private set; }
-    
-    [field: SerializeField] public CardData Card { get; private set; }
+    public bool IsOccupied;
+    [field: SerializeField] public CardData CurrentCard { get; private set; }
 
-    public void PlaceCard(CardData newCard)
+    private void Update()
     {
-        if (HasCard == false)
-        {
-            Card = newCard;
-            HasCard = true;
-        }
+        IsOccupied = CurrentCard != null;
     }
 
+    public void PlaceCard(CardData card)
+    {
+        if (IsOccupied)
+        {
+            Debug.LogWarning("Slot is already occupied!");
+            return;
+        }
+
+        CurrentCard = card;
+        Debug.Log($"Card {card.cardName} placed in slot {gameObject.name}.");
+    }
+    
     public void RemoveCard()
     {
-        Card = null;
-        HasCard = false;
+        if (!IsOccupied)
+        {
+            Debug.LogWarning("Slot is already empty!");
+            return;
+        }
+
+        Debug.Log($"Card {CurrentCard.cardName} removed from slot {gameObject.name}.");
+        CurrentCard = null;
     }
 }

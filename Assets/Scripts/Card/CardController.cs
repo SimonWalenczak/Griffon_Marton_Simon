@@ -1,64 +1,16 @@
-using UnityEngine;
 using Card;
+using UnityEngine;
 
 public class CardController : MonoBehaviour
 {
-    public CardData Data;
+    public CardData CardData;
     public Slot CurrentSlot;
-    [field: SerializeField] public CardVisual CardVisual { get; private set; }
 
-    public CardStatus CardStatus;
-
-    public Vector3 CardPosition;
-    public Quaternion CardRotation;
-    public Vector3 CardScale;
-
-    CardStateManager _cardStateManager;
-
-    private void Start()
+    private void OnMouseDown()
     {
-        _cardStateManager = CardManager.Instance.CardStateManager;
-        CardVisual = GetComponent<CardVisual>();
-        CardVisual.Initialize(Data);
-    }
-
-    private void Update()
-    {
-        switch (CardStatus)
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.GameState == GameState.BarPhase)
         {
-            case CardStatus.InBar:
-                CardPosition = CurrentSlot.transform.position;
-                CardRotation = new Quaternion(0, 0, 0, 0);
-                CardScale = _cardStateManager.CardGenericScale;
-                break;
-
-            case CardStatus.Hovered:
-                CardPosition = CurrentSlot.transform.position;
-                CardRotation = new Quaternion(0, 0, 0, 0);
-                CardScale = _cardStateManager.CardHoveredScale;
-                break;
-
-            case CardStatus.Dragged:
-                CardPosition = CurrentSlot.transform.position;
-                CardRotation = new Quaternion(0, 0, 0, 0);
-                CardScale = _cardStateManager.CardDraggedScale;
-                break;
-
-            case CardStatus.InInn:
-                CardPosition = CurrentSlot.transform.position;
-                CardRotation = new Quaternion(0, 0, 0, 0);
-                CardScale = _cardStateManager.CardGenericScale;
-                break;
-
-            case CardStatus.Discarded:
-                CardPosition = CurrentSlot.transform.position;
-                CardRotation = new Quaternion(0, 0, 0, 0);
-                CardScale = _cardStateManager.CardGenericScale;
-                break;
+            GameManager.Instance.MoveCardToInn(CardData, gameObject);
         }
-
-        transform.position = Vector3.Lerp(transform.position, CardPosition, Time.deltaTime * _cardStateManager.GenericRotationSpeed);
-        transform.rotation = Quaternion.Lerp(transform.rotation, CardRotation, Time.deltaTime * _cardStateManager.GenericRotationSpeed);
-        transform.localScale = Vector3.Lerp(transform.localScale, CardScale, Time.deltaTime * _cardStateManager.GenericScaleSpeed);
     }
 }

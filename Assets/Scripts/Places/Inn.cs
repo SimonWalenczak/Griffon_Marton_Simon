@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Inn : MonoBehaviour
 {
+    public Transform spawnPoint;
+    public float cardSpacing = 1.5f;
+    public float cardScale;
+    
     public List<CardData> CardsInInn = new();
 
     public CardData GetCardAt(int cardFloor)
@@ -52,5 +56,45 @@ public class Inn : MonoBehaviour
     public void RemoveCardWithHateAttribute(Attribute hateAttribute)
     {
         CardsInInn.RemoveAll(data => data.BarCondition == hateAttribute);
+    }
+    
+    
+    public void AddClient(CardData card)
+    {
+        CardsInInn.Add(card);
+        SpawnCardGameObject(card);
+        Debug.Log($"Card {card.cardName} added to the inn.");
+    }
+    
+    public void RemoveCard(CardData card)
+    {
+        if (CardsInInn.Contains(card))
+        {
+            CardsInInn.Remove(card);
+            Debug.Log($"Card {card.cardName} removed from the inn.");
+        }
+        else
+        {
+            Debug.LogWarning($"Card {card.cardName} not found in the inn.");
+        }
+    }
+    
+    private void SpawnCardGameObject(CardData card)
+    {
+        Vector3 position = GetNextCardPosition();
+        GameObject cardObject = Instantiate(GameManager.Instance.CardPrefab, position, this.transform.rotation);
+        cardObject.GetComponent<CardVisual>().Initialize(card);
+        cardObject.transform.localScale *= cardScale;
+        cardObject.name = card.cardName;
+    }
+    
+    private Vector3 GetNextCardPosition()
+    {
+        return spawnPoint.position + new Vector3(0,1,CardsInInn.Count * 0.02f) * (CardsInInn.Count * cardSpacing);
+    }
+    
+    public int GetCardCount()
+    {
+        return CardsInInn.Count;
     }
 }

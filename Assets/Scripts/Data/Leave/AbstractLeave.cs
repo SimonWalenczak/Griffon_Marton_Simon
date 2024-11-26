@@ -5,5 +5,5 @@ public abstract class AbstractLeave : ScriptableObject
 {
     public string Description;
     
-    public abstract void Execute(CardData card);
+    public abstract int Execute(CardData card);
 }

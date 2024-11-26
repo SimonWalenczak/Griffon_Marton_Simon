@@ -55,9 +55,25 @@ public class Inn : MonoBehaviour
         return CardsInInn.FindIndex(data => data.cardName == cardData.cardName);
     }
 
-    public void RemoveCardWithHateAttribute(Attribute hateAttribute)
+    public int RemoveCardWithHateAttribute(Attribute hateAttribute, int CardIndex = 99)
     {
-        CardsInInn.RemoveAll(data => data.BarCondition == hateAttribute);
+        int countBelowCard = 0;
+        
+        for (int i = CardsInInn.Count; i >= 0; i--)
+        {
+            CardData card = CardsInInn[i];
+            if (card.BarCondition == hateAttribute)
+            {
+                if (i < CardIndex)
+                {
+                    countBelowCard++;
+                }
+                
+                RemoveCard(card);
+            }
+        }
+
+        return countBelowCard;
     }
     
     public void AddClient(CardData card)
@@ -71,7 +87,8 @@ public class Inn : MonoBehaviour
     {
         if (CardsInInn.Contains(card))
         {
-            CardsInInn.Remove(card);
+            int cardIndex = GetCardPosition(card);
+            RemoveCardAt(cardIndex);
             Debug.Log($"Card {card.cardName} removed from the inn.");
         }
         else
@@ -104,13 +121,18 @@ public class Inn : MonoBehaviour
 
             if (card.WantsToLeave(CardAttributeManager.PlayState.InnState))
             {
-                card.LeaveEvent.Execute(card);
+                i -= card.LeaveEvent.Execute(card);
                 
                 Debug.Log(card.cardName + " left the inn.");
-
-                Destroy(ObjectsInInn[i]);
-                ObjectsInInn.RemoveAt(i);
             }
         }
+    }
+
+    public void RemoveCardAt(int index)
+    {
+        Destroy(ObjectsInInn[index]);
+            
+        CardsInInn.RemoveAt(index);
+        ObjectsInInn.RemoveAt(index);
     }
 }

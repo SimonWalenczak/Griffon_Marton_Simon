@@ -6,10 +6,12 @@ public class LeavePlusAttributeHate : AbstractLeave
 {
     public Attribute HateAttribute;
     
-    public override void Execute(CardData card)
+    public override int Execute(CardData card)
     {
+        int index = GameManager.Instance.inn.GetCardPosition(card);
+        
         GameManager.Instance.inn.RemoveCard(card);
 
-        GameManager.Instance.inn.RemoveCardWithHateAttribute(HateAttribute);
+        return GameManager.Instance.inn.RemoveCardWithHateAttribute(HateAttribute, index);
     }
 }

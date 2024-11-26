@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Le Nain saoul
   m_EditorClassIdentifier: 
   cardName: Le Nain saoul
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 41b33c5c33beed945a918c98accb3153, type: 3}
   attributes: 0200000003000000
   BarCondition: 0
   InnCondition: {fileID: 11400000, guid: 88a9b8a0682056740ae2318a7cfe7180, type: 2}

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: "Les tripl\xE9s Gobelin 2"
   m_EditorClassIdentifier: 
   cardName: "Les tripl\xE9s Gobelin"
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 11da9b038882ff34cb50174f34d682f7, type: 3}
   attributes: 010000000500000005000000
   BarCondition: 4
   InnCondition: {fileID: 11400000, guid: e88fe7fbe37edf047a315c200322feab, type: 2}
   InnConditionText: 'Si il y a 3 Gobelins dans l''Auberge:'
-  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
-  IsGoblin: 0
+  LeaveEvent: {fileID: 11400000, guid: bc547784fe38e1e45b9b56d4122de6ca, type: 2}
+  IsGoblin: 1

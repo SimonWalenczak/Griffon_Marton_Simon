@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d65d7c2b18412f9d98bb2a19e8506a, type: 3}
   m_Name: Goblins Leave
   m_EditorClassIdentifier: 
-  Description: 
+  Description: Tous les gobelins partent

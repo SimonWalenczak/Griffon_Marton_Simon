@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Le Sorcier fain\xE9ant"
   m_EditorClassIdentifier: 
   cardName: "Le Sorcier fain\xE9ant"
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: bb136d1426e93eb47b8607a1334713ef, type: 3}
   attributes: 0200000005000000
   BarCondition: 3
   InnCondition: {fileID: 11400000, guid: f4087a9d860ee964b97856f845bb990a, type: 2}

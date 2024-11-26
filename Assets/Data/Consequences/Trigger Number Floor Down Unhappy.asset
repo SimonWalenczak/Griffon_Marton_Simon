@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6a279f224f472fb92ac3d19a9e77f0, type: 3}
   m_Name: Trigger Number Floor Down Unhappy
   m_EditorClassIdentifier: 
-  Description: 
-  FloorDelta: 0
+  Description: "Part et d\xE9clenche le m\xE9contentement du client 2 \xE9tages plus
+    bas"
+  FloorDelta: 2

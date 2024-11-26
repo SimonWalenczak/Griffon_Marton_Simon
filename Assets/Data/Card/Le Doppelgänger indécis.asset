@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Le Doppelg\xE4nger ind\xE9cis"
   m_EditorClassIdentifier: 
   cardName: "Le Doppelg\xE4nger ind\xE9cis"
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 9ff615a8c9453e6498cb04cd83a3d15d, type: 3}
   attributes: 0100000003000000
   BarCondition: 0
   InnCondition: {fileID: 11400000, guid: ec6b60320cff5a4459b6b6bdc51131a0, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Le G\xE9ant charitable"
   m_EditorClassIdentifier: 
   cardName: "Le G\xE9ant charitable"
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: da5c176bb1836004dac1015c15070426, type: 3}
   attributes: 0200000005000000
   BarCondition: 0
   InnCondition: {fileID: 11400000, guid: 1d19907d17c886743a5f8cbd03f04a7e, type: 2}

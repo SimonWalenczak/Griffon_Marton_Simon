@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: La religieuse abstinante
   m_EditorClassIdentifier: 
   cardName: La religieuse abstinante
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: ad7ccaea4267d944c88f832f32690abb, type: 3}
   attributes: 0100000004000000
   BarCondition: 3
   InnCondition: {fileID: 11400000, guid: 9b7897b1e8d365841beb24a6c1375093, type: 2}
   InnConditionText: "Si il y a de la Bi\xE8re directement au-dessus ou au-dessous
     de la Religieuse:"
-  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
+  LeaveEvent: {fileID: 11400000, guid: f1e63aa27fbe3aa4aa28771fea5d3b9c, type: 2}
   IsGoblin: 0

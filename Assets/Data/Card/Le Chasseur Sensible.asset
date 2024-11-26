@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Le Chasseur Sensible
   m_EditorClassIdentifier: 
   cardName: Le Chasseur Sensible
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: b3fbeaba3c6657e4fa6f95cfc9cfb2ce, type: 3}
   attributes: 0200000004000000
   BarCondition: 3
   InnCondition: {fileID: 11400000, guid: 57dabb93e0e4ef24ba6e462f3fca5227, type: 2}

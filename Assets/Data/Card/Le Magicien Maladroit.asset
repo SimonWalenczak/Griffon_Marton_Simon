@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Le Magicien Maladroit
   m_EditorClassIdentifier: 
   cardName: Le Magicien Maladroit
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 798bd9514b6f7ed44aa7bda413c00246, type: 3}
   attributes: 0200000004000000
   BarCondition: 5
   InnCondition: {fileID: 11400000, guid: d94d64cfbac77c246b95268d85729ab3, type: 2}

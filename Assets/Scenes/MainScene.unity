@@ -225,6 +225,12 @@ MonoBehaviour:
   isGameOver: 0
   CardPrefab: {fileID: 366484737724835017, guid: dfe19d4784c22be4baf0560ba08ac4ee, type: 3}
   MainCamera: {fileID: 1982913006}
+  SpriteAttributes:
+  - {fileID: 21300000, guid: a6b8b96a407ef90429b8672e7cce364a, type: 3}
+  - {fileID: 21300000, guid: c62659aad76cb404d8d3c476e44cf436, type: 3}
+  - {fileID: 21300000, guid: 5ab7dff18d115d54c8bde01e0d555ab9, type: 3}
+  - {fileID: 21300000, guid: 62c832b911391b443989b6bc1520c9f9, type: 3}
+  - {fileID: 21300000, guid: 72290df555d30314f90909bd3a1eabea, type: 3}
 --- !u!114 &376684690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed79b81d5bf54b2e94845fdf09711951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardsInBar: []
   slots:
   - {fileID: 1877813094}
   - {fileID: 1381815819}

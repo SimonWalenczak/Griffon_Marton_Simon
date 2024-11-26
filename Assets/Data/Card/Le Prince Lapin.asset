@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Le Prince Lapin
   m_EditorClassIdentifier: 
   cardName: Le Prince Lapin
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 133e2ad7558f591489e6e8f8ad81f136, type: 3}
   attributes: 0100000004000000
   BarCondition: 5
   InnCondition: {fileID: 11400000, guid: cfc96c3ceda9f0b43a1c247387b0817f, type: 2}

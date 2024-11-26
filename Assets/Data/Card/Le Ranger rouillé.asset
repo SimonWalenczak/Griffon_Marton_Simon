@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: "Le Ranger rouill\xE9"
   m_EditorClassIdentifier: 
   cardName: "Le Ranger rouill\xE9"
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: dd5f250a806c8394780a93e745276f1c, type: 3}
   attributes: 0200000003000000
   BarCondition: 4
   InnCondition: {fileID: 11400000, guid: d353f676d53070146963413903c81515, type: 2}
   InnConditionText: "Si il y a 3 Bi\xE8res ou plus dans le Bar:"
-  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
+  LeaveEvent: {fileID: 11400000, guid: ebcdd99131f77074bad7d2fb3ae21f7d, type: 2}
   IsGoblin: 0

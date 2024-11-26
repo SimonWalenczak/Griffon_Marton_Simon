@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: "Le Moine en plein je\xFBne"
   m_EditorClassIdentifier: 
   cardName: "Le Moine en plein je\xFBne"
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 419d742052a237b4b88fcb8ffcb5655c, type: 3}
   attributes: 0200000004000000
   BarCondition: 5
   InnCondition: {fileID: 11400000, guid: c27bd51fc9c42514ba253d109b145f4c, type: 2}
   InnConditionText: 'Si il y a de la Nourritue directement au-dessus ou au-dessous
     du moine:'
-  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
+  LeaveEvent: {fileID: 11400000, guid: f1e63aa27fbe3aa4aa28771fea5d3b9c, type: 2}
   IsGoblin: 0

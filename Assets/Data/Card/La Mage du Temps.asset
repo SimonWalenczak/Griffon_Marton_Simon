@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: La Mage du Temps
   m_EditorClassIdentifier: 
   cardName: La Mage du Temps
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 94ae11d2b46a8e246bc25864cff92372, type: 3}
   attributes: 0200000005000000
   BarCondition: 0
   InnCondition: {fileID: 11400000, guid: f621a1d2734bda3428c70eda16580d21, type: 2}

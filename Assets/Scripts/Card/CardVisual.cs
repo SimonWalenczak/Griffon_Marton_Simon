@@ -41,9 +41,27 @@ namespace Card
                         break;
                 }
             }
-        
+
+            switch (data.BarCondition)
+            {
+                case Attribute.Beer:
+                    _barConditionIcon.sprite = GameManager.Instance.SpriteAttributes[0];
+                    break;
+                case Attribute.Food:
+                    _barConditionIcon.sprite = GameManager.Instance.SpriteAttributes[1];
+                    break;
+                case Attribute.Fight:
+                    _barConditionIcon.sprite = GameManager.Instance.SpriteAttributes[2];
+                    break;
+                case Attribute.Noise:
+                    _barConditionIcon.sprite = GameManager.Instance.SpriteAttributes[3];
+                    break;
+                case Attribute.Smell:
+                    _barConditionIcon.sprite = GameManager.Instance.SpriteAttributes[4];
+                    break;
+            }
+            
             _innConditionText.text = data.InnConditionText;
-            _barConditionIcon.sprite = CardAttributeManager.Instance.GetSprite(data.BarCondition);
             _consequenceText.text = data.LeaveEvent.Description;
         }
     }

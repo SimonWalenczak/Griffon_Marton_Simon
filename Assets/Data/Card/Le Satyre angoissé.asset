@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Le Satyre angoiss\xE9"
   m_EditorClassIdentifier: 
   cardName: "Le Satyre angoiss\xE9"
-  cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 2ba92e6c57581294b9e788e5ce852e1b, type: 3}
   attributes: 0100000005000000
   BarCondition: 0
   InnCondition: {fileID: 11400000, guid: f5dbf29cc0f337a4fab7e987dea6a074, type: 2}

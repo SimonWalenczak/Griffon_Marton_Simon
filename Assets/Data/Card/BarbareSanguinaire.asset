@@ -18,5 +18,5 @@ MonoBehaviour:
   BarCondition: 0
   InnCondition: {fileID: 11400000, guid: e0ae4d62e7bc30c4183da71dcceba50f, type: 2}
   InnConditionText: "S'il n'y a pas de Bi\xE8re dans le Bar:"
-  LeaveEvent: {fileID: 0}
+  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
   IsGoblin: 0

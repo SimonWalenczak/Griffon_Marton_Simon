@@ -136,7 +136,7 @@ namespace DefaultNamespace
             {
                 count = condition.Number;
             }
-            else if (Enum.TryParse(objectType.DisplayName(), out Attribute attribute))
+            else if (Enum.TryParse(objectType.HumanName(), out Attribute attribute))
             {
                 if (condition.Place == Place.Inn)
                 {

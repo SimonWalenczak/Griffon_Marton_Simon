@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376684688}
   - component: {fileID: 376684689}
+  - component: {fileID: 376684690}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -224,6 +225,27 @@ MonoBehaviour:
   isGameOver: 0
   CardPrefab: {fileID: 366484737724835017, guid: dfe19d4784c22be4baf0560ba08ac4ee, type: 3}
   MainCamera: {fileID: 1982913006}
+--- !u!114 &376684690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376684686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfe35434081461097ec315e284b6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inn: {fileID: 1025804456}
+  Bar: {fileID: 509160237}
+  AttributeSprites:
+  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &509160235
 GameObject:
   m_ObjectHideFlags: 0

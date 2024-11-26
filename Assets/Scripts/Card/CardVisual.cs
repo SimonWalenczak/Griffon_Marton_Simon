@@ -24,8 +24,8 @@ namespace Card
             }
         
             _innConditionText.text = data.InnConditionText;
-            //_barConditionIcon.sprite = CardAttributeManager.Instance.GetSprite(data.BarCondition);
-            //_consequenceText.text = data.LeaveEvent.Description;
+            _barConditionIcon.sprite = CardAttributeManager.Instance.GetSprite(data.BarCondition);
+            _consequenceText.text = data.LeaveEvent.Description;
         }
     }
 }

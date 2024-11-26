@@ -10,6 +10,8 @@ public class Inn : MonoBehaviour
     
     public List<CardData> CardsInInn = new();
 
+    private List<GameObject> ObjectsInInn = new();
+
     public CardData GetCardAt(int cardFloor)
     {
         if (cardFloor < 0 || cardFloor + 1 > CardsInInn.Count)
@@ -58,7 +60,6 @@ public class Inn : MonoBehaviour
         CardsInInn.RemoveAll(data => data.BarCondition == hateAttribute);
     }
     
-    
     public void AddClient(CardData card)
     {
         CardsInInn.Add(card);
@@ -86,6 +87,8 @@ public class Inn : MonoBehaviour
         cardObject.GetComponent<CardVisual>().Initialize(card);
         cardObject.transform.localScale *= cardScale;
         cardObject.name = card.cardName;
+
+        ObjectsInInn.Add(cardObject);
     }
     
     private Vector3 GetNextCardPosition()
@@ -96,5 +99,23 @@ public class Inn : MonoBehaviour
     public int GetCardCount()
     {
         return CardsInInn.Count;
+    }
+
+    public void ApplyInnEffects()
+    {
+        for (int i = CardsInInn.Count - 1; i >= 0; i--)
+        {
+            CardData card = CardsInInn[i];
+
+            if (card.WantsToLeave(CardAttributeManager.PlayState.InnState))
+            {
+                card.LeaveEvent.Execute(card);
+                
+                Debug.Log(card.cardName + " left the inn.");
+
+                Destroy(ObjectsInInn[i]);
+                ObjectsInInn.RemoveAt(i);
+            }
+        }
     }
 }

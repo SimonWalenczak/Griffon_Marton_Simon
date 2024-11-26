@@ -6,16 +6,19 @@ public class TriggerNumberFloorDownUnhappy : AbstractLeave
 {
     public int FloorDelta;
     
-    public override void Execute(CardData card)
+    public override int Execute(CardData card)
     {
         int index = GameManager.Instance.inn.GetCardPosition(card);
+        GameManager.Instance.inn.RemoveCard(card);
         if (index - FloorDelta < 0)
         {
-            return;
+            return 0;
         }
         
         CardData toRemove = GameManager.Instance.inn.GetCardAt(index - FloorDelta);
         toRemove.LeaveEvent.Execute(card);
         GameManager.Instance.inn.RemoveCard(toRemove);
+
+        return 1;
     }
 }

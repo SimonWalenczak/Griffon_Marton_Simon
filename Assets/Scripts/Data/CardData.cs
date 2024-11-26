@@ -34,7 +34,7 @@ namespace Card
         {
             if (state == CardAttributeManager.PlayState.InnState)
             {
-                return InnCondition.CheckCondition(CardAttributeManager.Instance.Inn.GetCardPosition(this));
+                return InnCondition.CheckCondition(GameManager.Instance.inn.GetCardPosition(this));
             }
             else
             {

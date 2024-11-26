@@ -100,7 +100,7 @@ namespace DefaultNamespace
 
                 case Comparison.LastFloor:
                 {
-                    return CardFloor + 1 == CardAttributeManager.Instance.Inn.CardsInInn.Count;
+                    return CardFloor + 1 == GameManager.Instance.inn.CardsInInn.Count;
                 }
 
                 case Comparison.Adjacent:
@@ -121,7 +121,7 @@ namespace DefaultNamespace
             {
                 if (condition.Place == Place.Inn)
                 {
-                    count = CardAttributeManager.Instance.Inn.CountGoblins();
+                    count = GameManager.Instance.inn.CountGoblins();
                 }
                 else
                 {
@@ -130,7 +130,7 @@ namespace DefaultNamespace
             }
             else if (objectType == ObjectType.Floor)
             {
-                count = CardAttributeManager.Instance.Inn.CardsInInn.Count;
+                count = GameManager.Instance.inn.CardsInInn.Count;
             }
             else if (objectType == ObjectType.Number)
             {
@@ -140,7 +140,7 @@ namespace DefaultNamespace
             {
                 if (condition.Place == Place.Inn)
                 {
-                    count = CardAttributeManager.Instance.Inn.CountCardsByAttribute(attribute);
+                    count = GameManager.Instance.inn.CountCardsByAttribute(attribute);
                 }
                 else
                 {
@@ -179,7 +179,7 @@ namespace DefaultNamespace
             int count = 0;
 
             bool previousCardCounted = true;
-            foreach (CardData card in CardAttributeManager.Instance.Inn.CardsInInn)
+            foreach (CardData card in GameManager.Instance.inn.CardsInInn)
             {
                 if (card.HasAttribute(conditionAttribute))
                 {
@@ -205,8 +205,8 @@ namespace DefaultNamespace
 
         private bool EvaluateAboveOrBelow(Condition condition, int cardFloor)
         {
-            CardData belowCard = CardAttributeManager.Instance.Inn.GetCardAt(cardFloor - 1);
-            CardData aboveCard = CardAttributeManager.Instance.Inn.GetCardAt(cardFloor + 1);
+            CardData belowCard = GameManager.Instance.inn.GetCardAt(cardFloor - 1);
+            CardData aboveCard = GameManager.Instance.inn.GetCardAt(cardFloor + 1);
 
             if (!Enum.TryParse(condition.Left.DisplayName(), out Attribute conditionAttribute))
             {

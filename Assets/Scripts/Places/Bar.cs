@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Bar : MonoBehaviour
 {
-    public List<CardData> CardsInBar = new();
-
     public List<Slot> slots;
     public int MaxCapacity = 4;
     
     public int CountGoblins()
     {
         int count = 0;
-        foreach (CardData card in CardsInBar)
+        foreach (Slot cardSlot in slots)
         {
-            if (card.IsGoblin)
+            if (cardSlot.CurrentCard.IsGoblin)
             {
                 count++;
             }
@@ -25,9 +23,14 @@ public class Bar : MonoBehaviour
     public int CountCardsByAttribute(Attribute conditionAttribute)
     {
         int count = 0;
-        foreach (CardData card in CardsInBar)
+        foreach (Slot cardSlot in slots)
         {
-            if (card.HasAttribute(conditionAttribute))
+            if (cardSlot.CurrentCard == null)
+            {
+                continue;
+            }
+            
+            if (cardSlot.CurrentCard.HasAttribute(conditionAttribute))
             {
                 count++;
             }

@@ -64,7 +64,7 @@ public class GameManager : Singleton<GameManager>
         if (isGameOver)
             return;
 
-        //inn.ApplyInnEffects();
+        inn.ApplyInnEffects();
 
         List<CardData> newClients = new List<CardData>();
         int nbSlotEmpty = bar.NbSlotEmpty();

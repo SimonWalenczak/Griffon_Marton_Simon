@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da12924ac36c4af0b95b56929e544555, type: 3}
   m_Name: HateFightAttributeLeave
   m_EditorClassIdentifier: 
+  Description: Il part car il n'aime pas les combats
   HateAttribute: 3

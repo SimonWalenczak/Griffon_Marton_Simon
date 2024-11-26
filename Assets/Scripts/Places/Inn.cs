@@ -59,7 +59,7 @@ public class Inn : MonoBehaviour
     {
         int countBelowCard = 0;
         
-        for (int i = CardsInInn.Count; i >= 0; i--)
+        for (int i = CardsInInn.Count - 1; i >= 0; i--)
         {
             CardData card = CardsInInn[i];
             if (card.BarCondition == hateAttribute)
@@ -110,7 +110,7 @@ public class Inn : MonoBehaviour
     
     private Vector3 GetNextCardPosition()
     {
-        return spawnPoint.position + new Vector3(0,1,CardsInInn.Count * 0.02f) * (CardsInInn.Count * cardSpacing);
+        return spawnPoint.position + new Vector3(0,1,CardsInInn.Count * -0.1f) * (CardsInInn.Count * cardSpacing);
     }
 
     public void ApplyInnEffects()
@@ -134,5 +134,10 @@ public class Inn : MonoBehaviour
             
         CardsInInn.RemoveAt(index);
         ObjectsInInn.RemoveAt(index);
+
+        for (int i = index; i < ObjectsInInn.Count; i++)
+        {
+            ObjectsInInn[i].transform.position -= new Vector3(0, cardSpacing, -0.1f);
+        }
     }
 }

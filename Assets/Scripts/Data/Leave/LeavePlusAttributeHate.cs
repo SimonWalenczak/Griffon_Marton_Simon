@@ -8,7 +8,7 @@ public class LeavePlusAttributeHate : AbstractLeave
     
     public override void Execute(CardData card)
     {
-        CardAttributeManager.Instance.Inn.CardsInInn.Remove(card);
+        CardAttributeManager.Instance.Inn.RemoveCard(card);
 
         CardAttributeManager.Instance.Inn.RemoveCardWithHateAttribute(HateAttribute);
     }

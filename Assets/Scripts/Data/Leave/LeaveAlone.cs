@@ -6,6 +6,6 @@ public class LeaveAlone : AbstractLeave
 {
     public override void Execute(CardData card)
     {
-        CardAttributeManager.Instance.Inn.CardsInInn.Remove(card);
+        CardAttributeManager.Instance.Inn.RemoveCard(card);
     }
 }

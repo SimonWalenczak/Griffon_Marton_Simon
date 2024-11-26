@@ -208,7 +208,7 @@ namespace DefaultNamespace
             CardData belowCard = GameManager.Instance.inn.GetCardAt(cardFloor - 1);
             CardData aboveCard = GameManager.Instance.inn.GetCardAt(cardFloor + 1);
 
-            if (!Enum.TryParse(condition.Left.DisplayName(), out Attribute conditionAttribute))
+            if (!Enum.TryParse(condition.Left.HumanName(), out Attribute conditionAttribute))
             {
                 return false;
             }

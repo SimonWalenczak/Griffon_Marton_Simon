@@ -19,5 +19,5 @@ MonoBehaviour:
   InnCondition: {fileID: 11400000, guid: c27bd51fc9c42514ba253d109b145f4c, type: 2}
   InnConditionText: 'Si il y a de la Nourritue directement au-dessus ou au-dessous
     du moine:'
-  LeaveEvent: {fileID: 0}
+  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
   IsGoblin: 0

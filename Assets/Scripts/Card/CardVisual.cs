@@ -21,6 +21,25 @@ namespace Card
             for (int i = 0; i < data.attributes.Count; i++)
             {
                 _cardAttributeIcons[i].gameObject.SetActive(true);
+
+                switch (data.attributes[i])
+                {
+                    case Attribute.Beer:
+                        _cardAttributeIcons[i].sprite = GameManager.Instance.SpriteAttributes[0];
+                        break;
+                    case Attribute.Food:
+                        _cardAttributeIcons[i].sprite = GameManager.Instance.SpriteAttributes[1];
+                        break;
+                    case Attribute.Fight:
+                        _cardAttributeIcons[i].sprite = GameManager.Instance.SpriteAttributes[2];
+                        break;
+                    case Attribute.Noise:
+                        _cardAttributeIcons[i].sprite = GameManager.Instance.SpriteAttributes[3];
+                        break;
+                    case Attribute.Smell:
+                        _cardAttributeIcons[i].sprite = GameManager.Instance.SpriteAttributes[4];
+                        break;
+                }
             }
         
             _innConditionText.text = data.InnConditionText;

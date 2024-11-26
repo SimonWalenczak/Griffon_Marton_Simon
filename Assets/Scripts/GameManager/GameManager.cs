@@ -26,6 +26,8 @@ public class GameManager : Singleton<GameManager>
     public GameObject CardPrefab;
     public Camera MainCamera;
 
+    public List<Sprite> SpriteAttributes;
+    
     private void Start()
     {
         StartGame();

@@ -18,5 +18,5 @@ MonoBehaviour:
   BarCondition: 3
   InnCondition: {fileID: 11400000, guid: f4087a9d860ee964b97856f845bb990a, type: 2}
   InnConditionText: "Si le sorcier est au 5\xE8me \xE9tage ou plus haut:"
-  LeaveEvent: {fileID: 0}
+  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
   IsGoblin: 0

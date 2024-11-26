@@ -19,5 +19,5 @@ MonoBehaviour:
   InnCondition: {fileID: 11400000, guid: 1d19907d17c886743a5f8cbd03f04a7e, type: 2}
   InnConditionText: "Si il y a 3 Bi\xE8res ou plus adjacentes OU 3 Nourritures ou
     plus adjacentes dans l'Auberge:"
-  LeaveEvent: {fileID: 0}
+  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
   IsGoblin: 0

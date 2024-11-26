@@ -18,5 +18,5 @@ MonoBehaviour:
   BarCondition: 5
   InnCondition: {fileID: 11400000, guid: cfc96c3ceda9f0b43a1c247387b0817f, type: 2}
   InnConditionText: "Si il y a plus de Bi\xE8re que de Nourritures dans l'Auberge:"
-  LeaveEvent: {fileID: 0}
+  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
   IsGoblin: 0

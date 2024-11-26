@@ -18,5 +18,5 @@ MonoBehaviour:
   BarCondition: 0
   InnCondition: {fileID: 11400000, guid: f5dbf29cc0f337a4fab7e987dea6a074, type: 2}
   InnConditionText: "Si il n'y aucune Bi\xE8re dans l'auberge:"
-  LeaveEvent: {fileID: 0}
+  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
   IsGoblin: 0

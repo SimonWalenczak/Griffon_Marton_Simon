@@ -18,5 +18,5 @@ MonoBehaviour:
   BarCondition: 4
   InnCondition: {fileID: 11400000, guid: d353f676d53070146963413903c81515, type: 2}
   InnConditionText: "Si il y a 3 Bi\xE8res ou plus dans le Bar:"
-  LeaveEvent: {fileID: 0}
+  LeaveEvent: {fileID: 11400000, guid: 2de313c02e7be7a4cb36295439e4c759, type: 2}
   IsGoblin: 0

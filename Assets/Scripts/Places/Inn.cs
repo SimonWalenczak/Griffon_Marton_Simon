@@ -95,11 +95,6 @@ public class Inn : MonoBehaviour
     {
         return spawnPoint.position + new Vector3(0,1,CardsInInn.Count * 0.02f) * (CardsInInn.Count * cardSpacing);
     }
-    
-    public int GetCardCount()
-    {
-        return CardsInInn.Count;
-    }
 
     public void ApplyInnEffects()
     {

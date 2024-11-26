@@ -34,5 +34,7 @@ public class Slot : MonoBehaviour
 
         Debug.Log($"Card {CurrentCard.cardName} removed from slot {gameObject.name}.");
         CurrentCard = null;
+        IsOccupied = false;
+        
     }
 }

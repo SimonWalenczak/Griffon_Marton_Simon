@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0920c08e38142f684216ca152392996, type: 3}
-  m_Name: BarbareSanguinaire
+  m_Name: Le Chasseur Sensible
   m_EditorClassIdentifier: 
-  cardName: Le Barbare Sanguinaire
+  cardName: Le Chasseur Sensible
   cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
-  attributes: 0100000003000000
-  BarCondition: 0
-  InnCondition: {fileID: 11400000, guid: e0ae4d62e7bc30c4183da71dcceba50f, type: 2}
-  InnConditionText: "S'il n'y a pas de Bi\xE8re dans le Bar:"
+  attributes: 0200000004000000
+  BarCondition: 3
+  InnCondition: {fileID: 11400000, guid: 57dabb93e0e4ef24ba6e462f3fca5227, type: 2}
+  InnConditionText: "Si il y a plus de Nourritues que de Bi\xE8res dans l'Auberge:"
   LeaveEvent: {fileID: 0}
   IsGoblin: 0

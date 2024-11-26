@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Card;
 using Common;
-using Data;
 using UnityEngine;
 
 public enum GameState

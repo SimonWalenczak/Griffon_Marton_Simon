@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0920c08e38142f684216ca152392996, type: 3}
-  m_Name: BarbareSanguinaire
+  m_Name: La religieuse abstinante
   m_EditorClassIdentifier: 
-  cardName: Le Barbare Sanguinaire
+  cardName: La religieuse abstinante
   cardSprite: {fileID: 21300000, guid: 1dfff8a4c01a75f4aba1456ceac418c1, type: 3}
-  attributes: 0100000003000000
-  BarCondition: 0
-  InnCondition: {fileID: 11400000, guid: e0ae4d62e7bc30c4183da71dcceba50f, type: 2}
-  InnConditionText: "S'il n'y a pas de Bi\xE8re dans le Bar:"
+  attributes: 0100000004000000
+  BarCondition: 3
+  InnCondition: {fileID: 11400000, guid: 9b7897b1e8d365841beb24a6c1375093, type: 2}
+  InnConditionText: "Si il y a de la Bi\xE8re directement au-dessus ou au-dessous
+    de la Religieuse:"
   LeaveEvent: {fileID: 0}
   IsGoblin: 0

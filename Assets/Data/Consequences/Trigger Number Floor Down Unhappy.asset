@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Trigger Number Floor Down Unhappy
   m_EditorClassIdentifier: 
   Description: "Part et d\xE9clenche le m\xE9contentement du client 2 \xE9tages plus
-    bas"
+    bas."
   FloorDelta: 2
